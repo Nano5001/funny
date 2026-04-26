@@ -1,75 +1,435 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yahya Mdallel — Official Page</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Yahya Madallel Roast Clinic ☕🔥</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: radial-gradient(circle at 20% 30%, #0a0f1c, #03060c);
+      font-family: 'Segoe UI', 'Poppins', 'Manrope', system-ui, -apple-system, 'Inter', sans-serif;
+      color: #f5e9d3;
+      line-height: 1.4;
+      padding: 2rem 1.5rem;
+    }
+
+    /* grungy container */
+    .roast-container {
+      max-width: 1380px;
+      margin: 0 auto;
+      backdrop-filter: blur(2px);
+    }
+
+    /* header — fake dealer vibe */
+    .drug-dealer-header {
+      background: #0b2b1fdd;
+      border-bottom: 4px solid #e6c45e;
+      border-radius: 4rem 4rem 2rem 2rem;
+      padding: 1.5rem 2rem;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 20px 30px -15px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,245,180,0.2);
+      transition: all 0.2s;
+    }
+
+    .drug-dealer-header h1 {
+      font-size: 3.2rem;
+      letter-spacing: -0.02em;
+      font-weight: 800;
+      background: linear-gradient(135deg, #FFD966, #FFB347, #FF7B24);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      display: inline-block;
+    }
+
+    .sub-roast {
+      font-size: 1.2rem;
+      font-weight: 500;
+      background: #1f2c1bcc;
+      display: inline-block;
+      padding: 0.3rem 2rem;
+      border-radius: 60px;
+      margin-top: 0.8rem;
+      letter-spacing: 1px;
+      backdrop-filter: blur(4px);
+      border: 1px solid #e6c45e66;
+    }
+
+    .warning-badge {
+      background: #2f1a0c;
+      color: #ffb347;
+      font-weight: bold;
+      padding: 0.4rem 1rem;
+      border-radius: 3rem;
+      font-size: 0.8rem;
+      display: inline-block;
+      margin-top: 0.8rem;
+    }
+
+    /* grid system — gallery of shame */
+    .roast-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin: 3rem 0 2rem 0;
+    }
+
+    .roast-card {
+      background: rgba(20, 25, 35, 0.85);
+      backdrop-filter: blur(8px);
+      border-radius: 3rem;
+      overflow: hidden;
+      width: 360px;
+      max-width: 100%;
+      transition: transform 0.2s ease, box-shadow 0.2s;
+      border: 1px solid rgba(230, 196, 94, 0.4);
+      box-shadow: 0 20px 35px -12px black;
+    }
+
+    .roast-card:hover {
+      transform: translateY(-8px);
+      border-color: #f5b042;
+      box-shadow: 0 28px 30px -12px #000000aa;
+    }
+
+    .img-frame {
+      width: 100%;
+      height: 260px;
+      overflow: hidden;
+      background: #111;
+      border-bottom: 3px solid #fd9e4a;
+      position: relative;
+    }
+
+    .img-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+      filter: contrast(1.05) brightness(0.95);
+    }
+
+    .roast-card:hover .img-frame img {
+      transform: scale(1.02);
+    }
+
+    .roast-content {
+      padding: 1.4rem 1.8rem 2rem;
+      text-align: center;
+    }
+
+    .roast-title {
+      font-size: 1.7rem;
+      font-weight: 800;
+      background: linear-gradient(120deg, #FFF1B5, #FFBC6E);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 0.5rem;
+    }
+
+    .roast-text {
+      font-size: 1rem;
+      line-height: 1.45;
+      margin: 0.8rem 0;
+      color: #e5d8b0;
+      border-left: 3px solid #ffae5a;
+      padding-left: 0.8rem;
+      text-align: left;
+      background: #00000033;
+      border-radius: 0 12px 12px 0;
+    }
+
+    .roast-burn {
+      background: #cc5a2e30;
+      border-radius: 30px;
+      padding: 0.4rem 1rem;
+      font-size: 0.85rem;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 0.7rem;
+      color: #ffae70;
+      letter-spacing: 0.5px;
+    }
+
+    /* special ad section (fake product) */
+    .fake-drug-section {
+      background: #1e2a1ecc;
+      border-radius: 3rem;
+      margin: 3rem 0 2rem;
+      padding: 2rem;
+      text-align: center;
+      border: 2px dashed #e7b874;
+      backdrop-filter: blur(5px);
+    }
+
+    .fake-drug-section h2 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      background: linear-gradient(145deg, #fcb375, #ff896b);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .product-pill {
+      display: inline-block;
+      background: #2b3224;
+      padding: 0.5rem 1.6rem;
+      border-radius: 60px;
+      margin: 1rem;
+      font-weight: bold;
+      font-size: 1.1rem;
+      border: 1px solid #ffae70;
+    }
+
+    .cta-button {
+      background: #e67e22;
+      border: none;
+      padding: 0.8rem 2rem;
+      border-radius: 60px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #1e1a0c;
+      cursor: pointer;
+      transition: 0.1s linear;
+      font-family: inherit;
+      margin: 1rem auto;
+      display: inline-block;
+      box-shadow: 0 5px 0 #864e16;
+    }
+
+    .cta-button:active {
+      transform: translateY(2px);
+      box-shadow: 0 2px 0 #864e16;
+    }
+
+    .roast-footer {
+      text-align: center;
+      margin-top: 3rem;
+      border-top: 1px solid #ffb34755;
+      padding: 1.5rem;
+      font-size: 0.85rem;
+      color: #bcab84;
+    }
+
+    @media (max-width: 780px) {
+      body {
+        padding: 1rem;
+      }
+      .drug-dealer-header h1 {
+        font-size: 2rem;
+      }
+      .roast-card {
+        width: 100%;
+        max-width: 380px;
+      }
+    }
+
+    /* blinking roast effect */
+    @keyframes subtlePulse {
+      0% { text-shadow: 0 0 0px #ffa559; }
+      100% { text-shadow: 0 0 5px #ff884d; }
+    }
+
+    .highlight-burn {
+      animation: subtlePulse 1s infinite alternate;
+      font-weight: 800;
+    }
+  </style>
 </head>
-
 <body>
-  <div class="container">
+<div class="roast-container">
+  <header class="drug-dealer-header">
+    <h1>🔥 YAHYA MADALLEL ROAST LAB 🔥</h1>
+    <div class="sub-roast">☕ “Premium Grade Humiliation — No Prescription Needed” ☕</div>
+    <div class="warning-badge">⚠️ WARNING: High toxicity, extreme sarcasm & factual burns ⚠️</div>
+  </header>
 
-    <header class="hero">
-      <h1>Welcome</h1>
-      <h2>to the official page of <span>Yahya Mdallel</span></h2>
-      <p class="subtitle">
-        Premium content curator, part-time philosopher, full-time professional procrastinator, and occasional caveman impersonator.
-      </p>
-    </header>
-
-    <section class="card">
-      <h3>What you're subscribing to</h3>
-      <ul>
-        <li>Exclusive behind-the-scenes footage of Yahya overthinking simple decisions like "what to eat" (spoiler: it's always pizza)</li>
-        <li>High-definition selfies taken right before ignoring 12 unread messages – because who has time for friends?</li>
-        <li>Workout content (rare appearances, mostly walking to the fridge but with intention and a side of guilt)</li>
-        <li>Daily motivational thoughts such as "tomorrow I start for real... or maybe the day after"</li>
-        <li>VIP access to his emotional support playlist that he swears "hits different at 2 AM" (it doesn't, but shh)</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h3>Subscription tiers</h3>
-
-      <div class="tier">
-        <h4>Basic</h4>
-        <p>You get nothing, but hey, at least you're not paying for disappointment. Welcome to the club!</p>
+  <!-- gallery of shame: two images food.jpg (yahya) and coffee.jpg (yahya+friend) -->
+  <div class="roast-gallery">
+    <!-- CARD 1: food.jpg - Yahya solo (eating/posing with food) -->
+    <div class="roast-card">
+      <div class="img-frame">
+        <img src="food.jpg" alt="Yahya Madallel pretending to be a food influencer" onerror="this.onerror=null; this.src='https://placehold.co/600x400/2d2a1e/f7c56e?text=missing+food.jpg+but+roast+still+applies'; this.alt='Missing food.jpg but roast mode active'">
       </div>
-
-      <div class="tier">
-        <h4>Premium</h4>
-        <p>You still get nothing, but now it's in HD. Crystal clear emptiness, just for you.</p>
-      </div>
-
-      <div class="tier highlight">
-        <h4>Ultra VIP</h4>
-        <p>Yahya might reply to your message… maybe… if the stars align, Mercury isn't in retrograde, and he hasn't eaten yet.</p>
-      </div>
-    </section>
-
-    <section class="adventure">
-      <div class="adventure-item">
-        <img src="food.jpg" alt="Yahya eating like a caveman">
-        <div class="adventure-text">
-          <h3>The Caveman Chronicles</h3>
-          <p>Behold Yahya in his natural habitat: the kitchen. Armed with nothing but a fork and sheer determination, he tackles a plate of spaghetti like it's a woolly mammoth. Watch as he grunts triumphantly after every bite, proving that evolution hasn't caught up with his appetite yet. Pro tip: Don't challenge him to a food fight – you'll lose. And by lose, we mean you'll be covered in sauce and regret.</p>
+      <div class="roast-content">
+        <div class="roast-title">🍕 YAHYA × FOOD 🍔</div>
+        <div class="roast-text">
+          “Bro, you look at a burger like it’s your lost soulmate. <span class="highlight-burn">food.jpg</span> is giving ‘I asked for extra sauce and extra therapy’.<br>
+          You eat carbs like they’re going extinct and your jawline ran away faster than your last relationship. Even the lettuce is judging you.”
         </div>
+        <div class="roast-burn">🔥 BURN SCORE: 9/10 — GREASY REALITY 🔥</div>
       </div>
+    </div>
 
-      <div class="adventure-item">
-        <img src="coffee.jpg" alt="Two dumb characters in coffee">
-        <div class="adventure-text">
-          <h3>Coffee Catastrophe</h3>
-          <p>Enter the coffee shop where genius meets... well, not genius. Yahya and his sidekick attempt to order coffee, but end up with a latte that's more confused than they are. One wants it hot, the other cold, and somehow they get a frappuccino with extra drama and a side of existential crisis. Moral of the story: When in doubt, just drink water. Or better yet, don't think at all – it's safer that way.</p>
+    <!-- CARD 2: coffee.jpg - Yahya + friend (coffee shop victim) -->
+    <div class="roast-card">
+      <div class="img-frame">
+        <img src="coffee.jpg" alt="Yahya and his friend pretending coffee gives them personality" onerror="this.onerror=null; this.src='https://placehold.co/600x400/2b2a24/e6b86e?text=coffee.jpg+missing+but+shade+included'; this.alt='Missing coffee.jpg but still roasting the duo'">
+      </div>
+      <div class="roast-content">
+        <div class="roast-title">☕️ DUO DISASTER ☕️</div>
+        <div class="roast-text">
+          “Two guys, one functioning brain cell. Yahya + friend in <span class="highlight-burn">coffee.jpg</span> look like they’re discussing ‘deep finance’ but actually owe each other 5 bucks. <br>
+          You both share the same chaotic energy — like you’d get lost inside an IKEA and blame the meatballs. Holding coffee won’t hide the fact you peaked in high school memes.”
         </div>
+        <div class="roast-burn">🔥 BURN SCORE: 10/10 — SIDE EFFECT: AWKWARD SILENCE 🔥</div>
       </div>
-    </section>
-
-    <footer class="footer">
-      <p><strong>Disclaimer:</strong> No refunds. Emotional damage may or may not be included. Side effects may include uncontrollable laughter and sudden urges to eat like a caveman.</p>
-    </footer>
-
+    </div>
   </div>
+
+  <!-- FAKE DRUG WEBSITE VIBES - "Madallel Mints" (completely fictional roast pill) -->
+  <div class="fake-drug-section">
+    <h2>💊 INTRODUCING “MADALLEL MINT ROAST” 💊</h2>
+    <p style="margin-bottom: 0.8rem; font-style: italic; color: #ffcf9a;">The first nootropic designed specifically to handle Yahya’s delusions</p>
+    <div class="product-pill">⚡ ACTIVE INGREDIENT: SHAME + CAFFEINE + TRUTH SERUM ⚡</div>
+    <div class="product-pill">💀 SIDE EFFECTS: sudden self-awareness, loss of ego, choked latte 💀</div>
+    <div style="max-width: 500px; margin: 1.4rem auto; background: #010f0ae0; border-radius: 2rem; padding: 1rem;">
+      <p style="font-size: 0.95rem;"><strong>⚠️ CLINICAL ROAST NOTICE ⚠️</strong><br>
+      Warning: This website is 99% satire. Yahya Madallel — your fashion sense screams ‘leftover Halloween costume’.<br>
+      You paired that coffee with the face of a man who just realized he left the stove on. And your friend? He’s your moral support in bad decisions. ❤️‍🔥<br>
+      <span style="color:#ffaf6a;">“Order now and get a free mirror to finally see the clown we all see.”</span>
+      </p>
+    </div>
+    <button class="cta-button" id="roastMeButton">🚨 CLICK FOR EXTRA ROAST (FREE SHAME) 🚨</button>
+    <div id="extraRoastZone" style="margin-top: 1.2rem; font-weight: bold; min-height: 70px; color: #FFBC6E;"></div>
+  </div>
+
+  <!-- additional roasts + interactive section (supposed drug disclaimer parody) -->
+  <div style="background: #0b111cd9; border-radius: 2rem; padding: 1.2rem; margin: 1rem 0; text-align: center;">
+    <p style="font-size: 1rem; letter-spacing: -0.2px;">☠️ <strong>YAHYA MADALLEL FACT CHECK:</strong> ☠️</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 0.5rem;">
+      <span style="background:#00000066; padding:0.2rem 0.8rem; border-radius: 30px;">🚫 Doesn’t understand ‘personal space’ in coffee pics</span>
+      <span style="background:#00000066; padding:0.2rem 0.8rem; border-radius: 30px;">🍟 Thinks ketchup is a personality trait</span>
+      <span style="background:#00000066; padding:0.2rem 0.8rem; border-radius: 30px;">📸 filters the food but never his life choices</span>
+    </div>
+  </div>
+
+  <div class="roast-footer">
+    <p>© 2025 Yahya Madallel Roast Clinic — “We roast because we care (not really)” <br> No real drugs were sold, only grade-A insults. All images: <strong>food.jpg</strong> (Yahya sins) & <strong>coffee.jpg</strong> (Yahya + accomplice). <br> If you feel roasted, you’re welcome. 🔥🔥🔥</p>
+  </div>
+</div>
+
+<script>
+  // Extra roasting functionality to simulate drug-dealer interactive burn
+  const roastBtn = document.getElementById('roastMeButton');
+  const extraZone = document.getElementById('extraRoastZone');
+
+  const extraRoasts = [
+    "💀 Yahya, your camera roll is 90% food and 10% blurry selfies where you try to look mysterious — spoiler: you look like you’re passing gas. 💀",
+    "☕️ That coffee pic with your friend? You guys look like the Wish version of a buddy comedy. I’ve seen more chemistry in expired milk. ☕️",
+    "🍔 FOOD.JPG honestly? The meal looks more sophisticated than your entire wardrobe. Even the napkin has more drip. 🍔",
+    "🎭 Yahya Madallel — the only thing roasted more than you is that chicken in food.jpg. Get a personality that isn’t just ‘I drink overpriced latte’. 🎭",
+    "👯‍♂️ Your friend in coffee.jpg has the expression of someone who regrets every life decision leading to that selfie. And same, buddy, same. 👯‍♂️",
+    "💊 Madallel Mint Fact: your last brain cell left the group chat after seeing food.jpg. Congrats on making bread look intelligent. 💊",
+    "🔥 BONUS ROAST 🔥 : you and your friend look like you both argue ‘who pays the tip’ for 40 minutes. Peak awkward energy. 💢"
+  ];
+
+  let lastIndex = -1;
+
+  function getRandomRoast() {
+    let newIndex;
+    do {
+      newIndex = Math.floor(Math.random() * extraRoasts.length);
+    } while (extraRoasts.length > 1 && newIndex === lastIndex);
+    lastIndex = newIndex;
+    return extraRoasts[newIndex];
+  }
+
+  function addExtraRoast() {
+    const randomRoast = getRandomRoast();
+    extraZone.innerHTML = `<div style="background:#241a0ee0; padding: 0.8rem 1.4rem; border-radius: 2rem; border-left: 8px solid #ff7e33; animation: fadeBlast 0.3s ease;">🔥 ${randomRoast} 🔥</div>`;
+    // add a little shake effect for fun
+    const btn = roastBtn;
+    btn.style.transform = "scale(0.97)";
+    setTimeout(() => { btn.style.transform = ""; }, 120);
+    // also make the extra zone vanish after 6 seconds? no, keep it funny but we can also show new ones each click
+  }
+
+  // add animation keyframe dynamically for fadeBlast if not exists
+  if (!document.querySelector('#roastStyleAnim')) {
+    const styleSheet = document.createElement("style");
+    styleSheet.id = "roastStyleAnim";
+    styleSheet.textContent = `
+      @keyframes fadeBlast {
+        0% { opacity: 0; transform: translateY(15px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+    `;
+    document.head.appendChild(styleSheet);
+  }
+
+  roastBtn.addEventListener('click', addExtraRoast);
+
+  // also initial fun console roast for developers (easter egg)
+  console.log("%c🔥 YAHYA MADALLEL — you got absolutely ROASTED. Check food.jpg & coffee.jpg if they exist, or else manifest your shame. 🔥", "color: #ff9f4a; font-size: 16px; font-weight: bold; background: #1e1b13; padding: 10px; border-radius: 10px;");
+  console.log("%c💀 Your friend in coffee.jpg is secretly laughing at you too 💀", "color: #ffad60");
+
+  // Additional effect: when you click any roast-text, copy roast to clipboard? just for fun.
+  const allRoastText = document.querySelectorAll('.roast-text');
+  allRoastText.forEach((el, idx) => {
+    el.addEventListener('click', () => {
+      const roastToCopy = el.innerText;
+      navigator.clipboard.writeText(roastToCopy).then(() => {
+        const toastMsg = document.createElement('div');
+        toastMsg.innerText = '🔥 Roast copied! Share the shame 🔥';
+        toastMsg.style.position = 'fixed';
+        toastMsg.style.bottom = '20px';
+        toastMsg.style.left = '50%';
+        toastMsg.style.transform = 'translateX(-50%)';
+        toastMsg.style.backgroundColor = '#2c1c0e';
+        toastMsg.style.color = '#ffcd94';
+        toastMsg.style.padding = '8px 16px';
+        toastMsg.style.borderRadius = '40px';
+        toastMsg.style.fontWeight = 'bold';
+        toastMsg.style.zIndex = '999';
+        toastMsg.style.border = '1px solid #ffae5a';
+        toastMsg.style.fontSize = '0.8rem';
+        document.body.appendChild(toastMsg);
+        setTimeout(() => toastMsg.remove(), 1800);
+      }).catch(() => {});
+    });
+    el.style.cursor = 'pointer';
+    el.title = 'Click to copy this brutal roast 📋';
+  });
+</script>
+
+<!-- additional inline style for hover effects and responsive -->
+<style>
+  .roast-text {
+    transition: all 0.1s;
+  }
+  .roast-text:active {
+    background: #fa9e4d22;
+  }
+  .img-frame img {
+    transition: filter 0.3s;
+  }
+  .roast-card:hover .img-frame img {
+    filter: brightness(1.02) contrast(1.1) sepia(0.1);
+  }
+  ::selection {
+    background: #e07c2c;
+    color: #020202;
+  }
+  .drug-dealer-header, .fake-drug-section {
+    transition: 0.3s;
+  }
+  button.cta-button {
+    transition: 0.05s linear;
+  }
+</style>
 </body>
 </html>
