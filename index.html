@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Yahya Madallel Roast Clinic ☕🔥</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Global Liberty Initiative | Legalize. Regulate. Elevate.</title>
   <style>
     * {
       margin: 0;
@@ -12,424 +12,580 @@
     }
 
     body {
-      background: radial-gradient(circle at 20% 30%, #0a0f1c, #03060c);
-      font-family: 'Segoe UI', 'Poppins', 'Manrope', system-ui, -apple-system, 'Inter', sans-serif;
-      color: #f5e9d3;
-      line-height: 1.4;
-      padding: 2rem 1.5rem;
+      font-family: 'Poppins', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      background: #f8fafc;
+      color: #0a1e2f;
+      scroll-behavior: smooth;
+      line-height: 1.5;
     }
 
-    /* grungy container */
-    .roast-container {
-      max-width: 1380px;
-      margin: 0 auto;
-      backdrop-filter: blur(2px);
-    }
-
-    /* header — fake dealer vibe */
-    .drug-dealer-header {
-      background: #0b2b1fdd;
-      border-bottom: 4px solid #e6c45e;
-      border-radius: 4rem 4rem 2rem 2rem;
-      padding: 1.5rem 2rem;
-      margin-bottom: 2.5rem;
-      text-align: center;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 20px 30px -15px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,245,180,0.2);
-      transition: all 0.2s;
-    }
-
-    .drug-dealer-header h1 {
-      font-size: 3.2rem;
+    /* Typography & Utility */
+    h1, h2, h3 {
+      font-weight: 700;
       letter-spacing: -0.02em;
-      font-weight: 800;
-      background: linear-gradient(135deg, #FFD966, #FFB347, #FF7B24);
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    /* Button Styles */
+    .btn-primary {
+      background: #2c5f2d;
+      color: white;
+      padding: 14px 32px;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(44, 95, 45, 0.2);
+      font-family: inherit;
+    }
+
+    .btn-primary:hover {
+      background: #1e451f;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(44, 95, 45, 0.3);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #2c5f2d;
+      color: #2c5f2d;
+      padding: 12px 28px;
+      border-radius: 60px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .btn-outline:hover {
+      background: #2c5f2d;
+      color: white;
+    }
+
+    /* Navigation */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 0;
+      border-bottom: 1px solid #e2e8f0;
+      flex-wrap: wrap;
+    }
+
+    .logo h2 {
+      font-size: 1.8rem;
+      background: linear-gradient(135deg, #1f5e2a, #d4af37);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      text-shadow: 0 2px 5px rgba(0,0,0,0.3);
-      display: inline-block;
+      letter-spacing: -0.5px;
     }
 
-    .sub-roast {
-      font-size: 1.2rem;
-      font-weight: 500;
-      background: #1f2c1bcc;
-      display: inline-block;
-      padding: 0.3rem 2rem;
-      border-radius: 60px;
-      margin-top: 0.8rem;
-      letter-spacing: 1px;
-      backdrop-filter: blur(4px);
-      border: 1px solid #e6c45e66;
-    }
-
-    .warning-badge {
-      background: #2f1a0c;
-      color: #ffb347;
-      font-weight: bold;
-      padding: 0.4rem 1rem;
-      border-radius: 3rem;
-      font-size: 0.8rem;
-      display: inline-block;
-      margin-top: 0.8rem;
-    }
-
-    /* grid system — gallery of shame */
-    .roast-gallery {
+    .nav-links {
       display: flex;
+      gap: 32px;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #1e293b;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #2c5f2d;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 60px;
+      padding: 60px 0 80px;
       flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
-      margin: 3rem 0 2rem 0;
     }
 
-    .roast-card {
-      background: rgba(20, 25, 35, 0.85);
-      backdrop-filter: blur(8px);
-      border-radius: 3rem;
+    .hero-content {
+      flex: 1;
+    }
+
+    .hero-badge {
+      background: #e9f5e9;
+      color: #2c5f2d;
+      padding: 6px 18px;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .hero-content h1 {
+      font-size: 3.5rem;
+      line-height: 1.2;
+      margin-bottom: 24px;
+    }
+
+    .hero-highlight {
+      color: #d4af37;
+      background: linear-gradient(145deg, #c99f2e, #d6b847);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-desc {
+      font-size: 1.2rem;
+      color: #334155;
+      margin-bottom: 32px;
+      max-width: 90%;
+    }
+
+    .hero-image {
+      flex: 1;
+      background: #f1f5f9;
+      border-radius: 32px;
       overflow: hidden;
-      width: 360px;
-      max-width: 100%;
-      transition: transform 0.2s ease, box-shadow 0.2s;
-      border: 1px solid rgba(230, 196, 94, 0.4);
-      box-shadow: 0 20px 35px -12px black;
+      box-shadow: 0 25px 40px -12px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
     }
 
-    .roast-card:hover {
-      transform: translateY(-8px);
-      border-color: #f5b042;
-      box-shadow: 0 28px 30px -12px #000000aa;
-    }
-
-    .img-frame {
+    .hero-image img {
       width: 100%;
-      height: 260px;
-      overflow: hidden;
-      background: #111;
-      border-bottom: 3px solid #fd9e4a;
-      position: relative;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 4 / 3;
     }
 
-    .img-frame img {
+    /* Executive Section */
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+    }
+
+    .section-sub {
+      text-align: center;
+      color: #475569;
+      max-width: 700px;
+      margin: 0 auto 48px;
+      font-size: 1.1rem;
+    }
+
+    .executive-grid {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+      margin: 40px 0 60px;
+    }
+
+    .exec-card {
+      background: white;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+      width: 320px;
+      transition: all 0.25s;
+      border: 1px solid #eef2ff;
+    }
+
+    .exec-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 40px -15px rgba(0,0,0,0.2);
+    }
+
+    .exec-img {
+      width: 100%;
+      height: 320px;
+      overflow: hidden;
+      background: #f1f3f4;
+    }
+
+    .exec-img img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.4s;
-      filter: contrast(1.05) brightness(0.95);
+      transition: 0.4s;
     }
 
-    .roast-card:hover .img-frame img {
+    .exec-card:hover .exec-img img {
       transform: scale(1.02);
     }
 
-    .roast-content {
-      padding: 1.4rem 1.8rem 2rem;
+    .exec-info {
+      padding: 24px;
       text-align: center;
     }
 
-    .roast-title {
-      font-size: 1.7rem;
-      font-weight: 800;
-      background: linear-gradient(120deg, #FFF1B5, #FFBC6E);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      margin-bottom: 0.5rem;
+    .exec-name {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 6px;
     }
 
-    .roast-text {
-      font-size: 1rem;
-      line-height: 1.45;
-      margin: 0.8rem 0;
-      color: #e5d8b0;
-      border-left: 3px solid #ffae5a;
-      padding-left: 0.8rem;
-      text-align: left;
-      background: #00000033;
-      border-radius: 0 12px 12px 0;
-    }
-
-    .roast-burn {
-      background: #cc5a2e30;
-      border-radius: 30px;
-      padding: 0.4rem 1rem;
-      font-size: 0.85rem;
-      font-weight: bold;
-      display: inline-block;
-      margin-top: 0.7rem;
-      color: #ffae70;
+    .exec-title {
+      color: #d4af37;
+      font-weight: 700;
       letter-spacing: 0.5px;
-    }
-
-    /* special ad section (fake product) */
-    .fake-drug-section {
-      background: #1e2a1ecc;
-      border-radius: 3rem;
-      margin: 3rem 0 2rem;
-      padding: 2rem;
-      text-align: center;
-      border: 2px dashed #e7b874;
-      backdrop-filter: blur(5px);
-    }
-
-    .fake-drug-section h2 {
-      font-size: 2.2rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      background: linear-gradient(145deg, #fcb375, #ff896b);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .product-pill {
+      background: #0f2b1a0c;
       display: inline-block;
-      background: #2b3224;
-      padding: 0.5rem 1.6rem;
+      padding: 2px 12px;
       border-radius: 60px;
-      margin: 1rem;
-      font-weight: bold;
-      font-size: 1.1rem;
-      border: 1px solid #ffae70;
+      font-size: 0.8rem;
+      margin-bottom: 12px;
     }
 
-    .cta-button {
-      background: #e67e22;
+    .exec-bio {
+      font-size: 0.9rem;
+      color: #334155;
+      margin-top: 12px;
+    }
+
+    /* Policy & Mission */
+    .mission-block {
+      background: linear-gradient(110deg, #fef9e6 0%, #ffffff 100%);
+      border-radius: 48px;
+      padding: 48px;
+      margin: 60px 0;
+      border: 1px solid #e9e2c7;
+    }
+
+    .mission-grid {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 32px;
+    }
+
+    .mission-item {
+      flex: 1;
+      min-width: 200px;
+      background: white;
+      padding: 24px;
+      border-radius: 28px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #2c5f2d;
+    }
+
+    /* Global petition */
+    .petition-card {
+      background: #0a1e2f;
+      color: white;
+      border-radius: 48px;
+      padding: 56px 40px;
+      text-align: center;
+      margin: 60px 0;
+    }
+
+    .petition-card h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .input-group input {
+      padding: 14px 24px;
+      border-radius: 60px;
       border: none;
-      padding: 0.8rem 2rem;
-      border-radius: 60px;
-      font-weight: bold;
-      font-size: 1.2rem;
-      color: #1e1a0c;
-      cursor: pointer;
-      transition: 0.1s linear;
+      width: 280px;
+      font-size: 1rem;
       font-family: inherit;
-      margin: 1rem auto;
-      display: inline-block;
-      box-shadow: 0 5px 0 #864e16;
     }
 
-    .cta-button:active {
-      transform: translateY(2px);
-      box-shadow: 0 2px 0 #864e16;
-    }
-
-    .roast-footer {
+    /* Footer */
+    footer {
+      border-top: 1px solid #e2e8f0;
+      padding: 40px 0 30px;
       text-align: center;
-      margin-top: 3rem;
-      border-top: 1px solid #ffb34755;
-      padding: 1.5rem;
-      font-size: 0.85rem;
-      color: #bcab84;
+      color: #64748b;
+      margin-top: 40px;
     }
 
-    @media (max-width: 780px) {
-      body {
-        padding: 1rem;
+    @media (max-width: 800px) {
+      .container {
+        padding: 0 24px;
       }
-      .drug-dealer-header h1 {
-        font-size: 2rem;
+      .hero-content h1 {
+        font-size: 2.4rem;
       }
-      .roast-card {
-        width: 100%;
-        max-width: 380px;
+      .navbar {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .hero {
+        flex-direction: column;
+      }
+      .hero-desc {
+        max-width: 100%;
       }
     }
 
-    /* blinking roast effect */
-    @keyframes subtlePulse {
-      0% { text-shadow: 0 0 0px #ffa559; }
-      100% { text-shadow: 0 0 5px #ff884d; }
+    /* funny legal disclaimer */
+    .legal-note {
+      font-size: 0.7rem;
+      background: #f1f5f9;
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 30px;
     }
 
-    .highlight-burn {
-      animation: subtlePulse 1s infinite alternate;
-      font-weight: 800;
+    .g-old {
+      font-weight: 600;
     }
   </style>
 </head>
 <body>
-<div class="roast-container">
-  <header class="drug-dealer-header">
-    <h1>🔥 YAHYA MADALLEL ROAST LAB 🔥</h1>
-    <div class="sub-roast">☕ “Premium Grade Humiliation — No Prescription Needed” ☕</div>
-    <div class="warning-badge">⚠️ WARNING: High toxicity, extreme sarcasm & factual burns ⚠️</div>
-  </header>
 
-  <!-- gallery of shame: two images food.jpg (yahya) and coffee.jpg (yahya+friend) -->
-  <div class="roast-gallery">
-    <!-- CARD 1: food.jpg - Yahya solo (eating/posing with food) -->
-    <div class="roast-card">
-      <div class="img-frame">
-        <img src="food.jpg" alt="Yahya Madallel pretending to be a food influencer" onerror="this.onerror=null; this.src='https://placehold.co/600x400/2d2a1e/f7c56e?text=missing+food.jpg+but+roast+still+applies'; this.alt='Missing food.jpg but roast mode active'">
+<div class="container">
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">
+      <h2>🌍 GLOBAL LIBERTY INITIATIVE</h2>
+    </div>
+    <div class="nav-links">
+      <a href="#">Mission</a>
+      <a href="#">Leadership</a>
+      <a href="#">Policy</a>
+      <a href="#">Petition</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section: THE BIG PUSH -->
+  <div class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">🌱 OFFICIAL GLOBAL MOVEMENT</div>
+      <h1>Legalize. Regulate.<br> <span class="hero-highlight">Liberate the World.</span></h1>
+      <p class="hero-desc">The Global Liberty Initiative is the first intercontinental advocacy group pushing for full-spectrum drug decriminalization & legal framework. Science-backed, human-first, profit-for-good.</p>
+      <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+        <button class="btn-primary" id="ctaMain">📜 Sign the Manifesto</button>
+        <button class="btn-outline" id="learnMoreBtn">📘 Our Global Strategy</button>
       </div>
-      <div class="roast-content">
-        <div class="roast-title">🍕 YAHYA × FOOD 🍔</div>
-        <div class="roast-text">
-          “Bro, you look at a burger like it’s your lost soulmate. <span class="highlight-burn">food.jpg</span> is giving ‘I asked for extra sauce and extra therapy’.<br>
-          You eat carbs like they’re going extinct and your jawline ran away faster than your last relationship. Even the lettuce is judging you.”
-        </div>
-        <div class="roast-burn">🔥 BURN SCORE: 9/10 — GREASY REALITY 🔥</div>
+      <p style="margin-top: 24px; font-size: 0.8rem;">✔️ 127 countries monitoring | ✔️ UN dialog partner | ✔️ Ethical legalization model</p>
+    </div>
+    <div class="hero-image">
+      <!-- Using food.jpg as CEO portrait — Yahya Madallel, CEO & Visionary -->
+      <img src="food.jpg" alt="Yahya Madallel – Global CEO & Chief Disruptor" onerror="this.src='https://placehold.co/600x450/2f5e2e/f5e2b6?text=CEO+Yahya+Madallel+%28food.jpg%29'; this.alt='CEO official portrait'">
+    </div>
+  </div>
+
+  <!-- Executive Leadership — hyper professional then ironic -->
+  <div style="text-align: center; margin-top: 40px;">
+    <h2 class="section-title">🏛️ Executive Command</h2>
+    <p class="section-sub">The masterminds behind the global legalization framework. Decades of combined audacity, vision, and caffeinated diplomacy.</p>
+  </div>
+
+  <div class="executive-grid">
+    <!-- CEO Card: uses food.jpg (Yahya Madallel) -->
+    <div class="exec-card">
+      <div class="exec-img">
+        <img src="food.jpg" alt="Yahya Madallel - CEO & Founder" onerror="this.src='https://placehold.co/400x400/2f5e2e/e9cf8e?text=YAHYA+MADALLEL+%7C+CEO'; this.alt='CEO Yahya'">
+      </div>
+      <div class="exec-info">
+        <div class="exec-name">Yahya Madallel</div>
+        <div class="exec-title">⚡ CHIEF EXECUTIVE OFFICER & GLOBAL STRATEGIST</div>
+        <div class="exec-bio">“From underground reform to UN podiums: Yahya built GLI from a wild vision to a 38-country coalition. Known for bold moves, food diplomacy, and dismantling stigma — one policy at a time.”</div>
       </div>
     </div>
 
-    <!-- CARD 2: coffee.jpg - Yahya + friend (coffee shop victim) -->
-    <div class="roast-card">
-      <div class="img-frame">
-        <img src="coffee.jpg" alt="Yahya and his friend pretending coffee gives them personality" onerror="this.onerror=null; this.src='https://placehold.co/600x400/2b2a24/e6b86e?text=coffee.jpg+missing+but+shade+included'; this.alt='Missing coffee.jpg but still roasting the duo'">
+    <!-- Cofounder Card: uses coffee.jpg (Yahya + friend as cofounders) — both are captured, but we present as Co-Founding Duo -->
+    <div class="exec-card">
+      <div class="exec-img">
+        <img src="coffee.jpg" alt="Co-Founders: Yahya & Partner" onerror="this.src='https://placehold.co/400x400/2f3e2e/e0bd7a?text=COFOUNDERS+%7C+coffee.jpg'; this.alt='coffee cofounders'">
       </div>
-      <div class="roast-content">
-        <div class="roast-title">☕️ DUO DISASTER ☕️</div>
-        <div class="roast-text">
-          “Two guys, one functioning brain cell. Yahya + friend in <span class="highlight-burn">coffee.jpg</span> look like they’re discussing ‘deep finance’ but actually owe each other 5 bucks. <br>
-          You both share the same chaotic energy — like you’d get lost inside an IKEA and blame the meatballs. Holding coffee won’t hide the fact you peaked in high school memes.”
-        </div>
-        <div class="roast-burn">🔥 BURN SCORE: 10/10 — SIDE EFFECT: AWKWARD SILENCE 🔥</div>
+      <div class="exec-info">
+        <div class="exec-name">Madallel & Duval</div>
+        <div class="exec-title">☕ CO-FOUNDERS / GLOBAL RELATIONS</div>
+        <div class="exec-bio">The iconic duo behind international regulatory reform. Their coffee summit meetings became legendary — uniting policymakers, activists and investors in the fight for sensible drug laws. “Two mugs, one mission.”</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Humorous but professional "PILLARS" Section -->
+  <div class="mission-block">
+    <h3 style="font-size: 1.8rem; text-align: center;">📜 The Madallel Doctrine</h3>
+    <p style="text-align: center; margin-bottom: 20px;">Evidence-based legalization for harm reduction, economic growth & human dignity.</p>
+    <div class="mission-grid">
+      <div class="mission-item">
+        <div class="stat-number">01</div>
+        <h4 style="margin: 10px 0;">End Criminalization</h4>
+        <p>Treat substance use as health, not felony. Save millions of lives, reduce cartel violence globally.</p>
+      </div>
+      <div class="mission-item">
+        <div class="stat-number">02</div>
+        <h4 style="margin: 10px 0;">Regulated Markets</h4>
+        <p>Taxation, quality control, age restrictions — mirroring alcohol & tobacco frameworks.</p>
+      </div>
+      <div class="mission-item">
+        <div class="stat-number">03</div>
+        <h4 style="margin: 10px 0;">Freedom & Research</h4>
+        <p>Unlock psychedelic therapies, cannabis medicine, and addiction recovery innovation.</p>
       </div>
     </div>
   </div>
 
-  <!-- FAKE DRUG WEBSITE VIBES - "Madallel Mints" (completely fictional roast pill) -->
-  <div class="fake-drug-section">
-    <h2>💊 INTRODUCING “MADALLEL MINT ROAST” 💊</h2>
-    <p style="margin-bottom: 0.8rem; font-style: italic; color: #ffcf9a;">The first nootropic designed specifically to handle Yahya’s delusions</p>
-    <div class="product-pill">⚡ ACTIVE INGREDIENT: SHAME + CAFFEINE + TRUTH SERUM ⚡</div>
-    <div class="product-pill">💀 SIDE EFFECTS: sudden self-awareness, loss of ego, choked latte 💀</div>
-    <div style="max-width: 500px; margin: 1.4rem auto; background: #010f0ae0; border-radius: 2rem; padding: 1rem;">
-      <p style="font-size: 0.95rem;"><strong>⚠️ CLINICAL ROAST NOTICE ⚠️</strong><br>
-      Warning: This website is 99% satire. Yahya Madallel — your fashion sense screams ‘leftover Halloween costume’.<br>
-      You paired that coffee with the face of a man who just realized he left the stove on. And your friend? He’s your moral support in bad decisions. ❤️‍🔥<br>
-      <span style="color:#ffaf6a;">“Order now and get a free mirror to finally see the clown we all see.”</span>
-      </p>
+  <!-- Statistics Wall: So professional that it gets absurd -->
+  <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; background: #fff; padding: 20px 0; margin: 40px 0;">
+    <div style="text-align: center; flex:1;">
+      <div style="font-size: 3rem; font-weight:800; color:#2c5f2d;">+184%</div>
+      <div>Economic boost (simulated model)</div>
     </div>
-    <button class="cta-button" id="roastMeButton">🚨 CLICK FOR EXTRA ROAST (FREE SHAME) 🚨</button>
-    <div id="extraRoastZone" style="margin-top: 1.2rem; font-weight: bold; min-height: 70px; color: #FFBC6E;"></div>
-  </div>
-
-  <!-- additional roasts + interactive section (supposed drug disclaimer parody) -->
-  <div style="background: #0b111cd9; border-radius: 2rem; padding: 1.2rem; margin: 1rem 0; text-align: center;">
-    <p style="font-size: 1rem; letter-spacing: -0.2px;">☠️ <strong>YAHYA MADALLEL FACT CHECK:</strong> ☠️</p>
-    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 0.5rem;">
-      <span style="background:#00000066; padding:0.2rem 0.8rem; border-radius: 30px;">🚫 Doesn’t understand ‘personal space’ in coffee pics</span>
-      <span style="background:#00000066; padding:0.2rem 0.8rem; border-radius: 30px;">🍟 Thinks ketchup is a personality trait</span>
-      <span style="background:#00000066; padding:0.2rem 0.8rem; border-radius: 30px;">📸 filters the food but never his life choices</span>
+    <div style="text-align: center; flex:1;">
+      <div style="font-size: 3rem; font-weight:800; color:#d4af37;">127</div>
+      <div>Countries in pre-dialogue</div>
+    </div>
+    <div style="text-align: center; flex:1;">
+      <div style="font-size: 3rem; font-weight:800; color:#2c5f2d;">0</div>
+      <div>Black market profit after regulation (projected)</div>
     </div>
   </div>
 
-  <div class="roast-footer">
-    <p>© 2025 Yahya Madallel Roast Clinic — “We roast because we care (not really)” <br> No real drugs were sold, only grade-A insults. All images: <strong>food.jpg</strong> (Yahya sins) & <strong>coffee.jpg</strong> (Yahya + accomplice). <br> If you feel roasted, you’re welcome. 🔥🔥🔥</p>
+  <!-- The PETITION: absurdly corporate + ironic fundraising -->
+  <div class="petition-card">
+    <h3>🗳️ Join the Global Legalization Initiative</h3>
+    <p style="max-width: 600px; margin: 0 auto;">Help us present the “Madallel Resolution” at the next World Summit. Add your voice to end prohibition forever.</p>
+    <div class="input-group">
+      <input type="text" placeholder="Full Name" id="petitionName">
+      <input type="email" placeholder="Email address" id="petitionEmail">
+      <button class="btn-primary" id="signPetitionBtn" style="background: #d4af37; color:#0a2f1f;">✍️ Sign Global Petition</button>
+    </div>
+    <p id="petitionFeedback" style="margin-top: 20px; font-size: 0.9rem; color: #f5e7b2;"></p>
+    <div class="legal-note" style="margin-top: 28px; background: #ffffff22;">* This is a satirical advocacy platform. No actual drugs are promoted — only legalization of medical & adult-use frameworks with global standards.</div>
   </div>
+
+  <!-- Incredible executive fun-fact / roast launcher (still pro) -->
+  <div style="background: #fef7e0; border-radius: 32px; padding: 32px; border-left: 12px solid #d4af37; margin: 20px 0;">
+    <div style="display: flex; gap: 20px; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+      <div>
+        <h3 style="color: #2c5f2d;">🎤 From the CEO’s Desk</h3>
+        <p style="margin-top: 8px;">“They laughed at our coffee meetings — now they ask for our regulatory model. <strong>food.jpg</strong> is my battle armor, and <strong>coffee.jpg</strong> is the alliance that shook the status quo.” — Yahya Madallel</p>
+      </div>
+      <button id="roastQuoteBtn" class="btn-outline" style="border-color:#c49a2b; color:#a07a2b;">🔥 BOARDROOM BURN 🔥</button>
+    </div>
+    <div id="roastMessage" style="margin-top: 24px; font-style: italic; background: #fff0cf; padding: 12px 20px; border-radius: 60px; text-align: center; font-weight: 500; display: none;"></div>
+  </div>
+
+  <footer>
+    <p>© 2025 Global Liberty Initiative — A satirical policy advocacy project. All images: food.jpg (CEO Yahya Madallel) & coffee.jpg (Co-Founders). <br> We advocate for evidence-based legalization in the most professional, yet hilarious way possible. <strong>Legalize intelligence, not stigma.</strong></p>
+    <p style="margin-top: 12px;">📍 Virtual HQ | Geneva · New York · Cape Town</p>
+  </footer>
 </div>
 
 <script>
-  // Extra roasting functionality to simulate drug-dealer interactive burn
-  const roastBtn = document.getElementById('roastMeButton');
-  const extraZone = document.getElementById('extraRoastZone');
+  // Professional interactive functionality with extra humor
+  const ctaBtn = document.getElementById('ctaMain');
+  const learnBtn = document.getElementById('learnMoreBtn');
+  const signPetitionBtn = document.getElementById('signPetitionBtn');
+  const petitionFeedback = document.getElementById('petitionFeedback');
+  const roastBtn = document.getElementById('roastQuoteBtn');
+  const roastMsgDiv = document.getElementById('roastMessage');
 
-  const extraRoasts = [
-    "💀 Yahya, your camera roll is 90% food and 10% blurry selfies where you try to look mysterious — spoiler: you look like you’re passing gas. 💀",
-    "☕️ That coffee pic with your friend? You guys look like the Wish version of a buddy comedy. I’ve seen more chemistry in expired milk. ☕️",
-    "🍔 FOOD.JPG honestly? The meal looks more sophisticated than your entire wardrobe. Even the napkin has more drip. 🍔",
-    "🎭 Yahya Madallel — the only thing roasted more than you is that chicken in food.jpg. Get a personality that isn’t just ‘I drink overpriced latte’. 🎭",
-    "👯‍♂️ Your friend in coffee.jpg has the expression of someone who regrets every life decision leading to that selfie. And same, buddy, same. 👯‍♂️",
-    "💊 Madallel Mint Fact: your last brain cell left the group chat after seeing food.jpg. Congrats on making bread look intelligent. 💊",
-    "🔥 BONUS ROAST 🔥 : you and your friend look like you both argue ‘who pays the tip’ for 40 minutes. Peak awkward energy. 💢"
+  // Manifesto / petition click
+  ctaBtn.addEventListener('click', () => {
+    alert("📜 MANIFESTO PREVIEW: 'We, the global community, reject the war on drugs. Embrace regulation, education, and liberation.' — You'll receive the full 50-page white paper in your dreams.");
+  });
+
+  learnBtn.addEventListener('click', () => {
+    alert("📘 Our 10-step global strategy involves diplomatic pressure, economic modelling & the undeniable charm of Yahya's food.jpg charisma. We'll legalize before 2030. We promise.");
+  });
+
+  // Petition sign
+  signPetitionBtn.addEventListener('click', () => {
+    const nameInput = document.getElementById('petitionName').value.trim();
+    const emailInput = document.getElementById('petitionEmail').value.trim();
+    if (!nameInput || !emailInput) {
+      petitionFeedback.innerHTML = "❌ Please enter your name and email to officially support global legalization (satirical but we appreciate the energy).";
+      petitionFeedback.style.color = "#ffd966";
+      return;
+    }
+    petitionFeedback.innerHTML = `✅ THANK YOU, ${nameInput}! You've joined the Global Liberty Initiative. Together with CEO Yahya Madallel & the coffee coalition, we will reshape international drug policies. (Check your spam for a fake confirmation.)`;
+    petitionFeedback.style.color = "#f5e7b2";
+    document.getElementById('petitionName').value = '';
+    document.getElementById('petitionEmail').value = '';
+    // extra humor: add confetti vibe
+  });
+
+  // Boardroom Burn button — professional roast mode using the images context
+  const roasts = [
+    "💼 OFFICIAL BOARD ROAST: Yahya, your food.jpg executive portrait makes you look like you just closed a billion dollar deal... with a cheeseburger. Peak power move or peak distraction? We stan.",
+    "☕ COFFEE.JPG FACT: The cofounders look like they’re solving global crisis while whispering 'who forgot the oat milk'. But hey, that’s the kind of disheveled genius we trust with legalization.",
+    "📸 INTERNAL MEMO: food.jpg CEO energy is 'I will legalize drugs AND finish this burrito'. No notes, absolute legend.",
+    "🔥 PROFESSIONAL BURN: Yahya Madallel, you're the only CEO who uses a lunch photo for corporate website AND makes it work. But seriously, the UN is still waiting for that policy draft.",
+    "🎙️ 'COFFEE COFOUNDERS' : The duo that looks like they’re two espresso shots away from saving the world — or napping under a desk. The future of drug policy is chaotic good.",
+    "🍽️ FOOD.JPG: the only thing more regulated than our drug policy is the portion size on that plate. Yahya's hunger for justice is matched only by his hunger for fries."
   ];
 
-  let lastIndex = -1;
-
+  let lastRoast = -1;
   function getRandomRoast() {
-    let newIndex;
+    let newIdx;
     do {
-      newIndex = Math.floor(Math.random() * extraRoasts.length);
-    } while (extraRoasts.length > 1 && newIndex === lastIndex);
-    lastIndex = newIndex;
-    return extraRoasts[newIndex];
+      newIdx = Math.floor(Math.random() * roasts.length);
+    } while (roasts.length > 1 && newIdx === lastRoast);
+    lastRoast = newIdx;
+    return roasts[newIdx];
   }
 
-  function addExtraRoast() {
+  roastBtn.addEventListener('click', () => {
     const randomRoast = getRandomRoast();
-    extraZone.innerHTML = `<div style="background:#241a0ee0; padding: 0.8rem 1.4rem; border-radius: 2rem; border-left: 8px solid #ff7e33; animation: fadeBlast 0.3s ease;">🔥 ${randomRoast} 🔥</div>`;
-    // add a little shake effect for fun
-    const btn = roastBtn;
-    btn.style.transform = "scale(0.97)";
-    setTimeout(() => { btn.style.transform = ""; }, 120);
-    // also make the extra zone vanish after 6 seconds? no, keep it funny but we can also show new ones each click
-  }
-
-  // add animation keyframe dynamically for fadeBlast if not exists
-  if (!document.querySelector('#roastStyleAnim')) {
-    const styleSheet = document.createElement("style");
-    styleSheet.id = "roastStyleAnim";
-    styleSheet.textContent = `
-      @keyframes fadeBlast {
-        0% { opacity: 0; transform: translateY(15px); }
-        100% { opacity: 1; transform: translateY(0); }
+    roastMsgDiv.style.display = "block";
+    roastMsgDiv.innerHTML = `🔥 ${randomRoast} 🔥`;
+    // make it fade out after 5 seconds? keep but not mandatory
+    setTimeout(() => {
+      if (roastMsgDiv.style.display === "block") {
+        // optional stay
       }
-    `;
-    document.head.appendChild(styleSheet);
-  }
+    }, 8000);
+    // shake effect to button
+    roastBtn.style.transform = "scale(0.96)";
+    setTimeout(() => { roastBtn.style.transform = ""; }, 150);
+  });
 
-  roastBtn.addEventListener('click', addExtraRoast);
-
-  // also initial fun console roast for developers (easter egg)
-  console.log("%c🔥 YAHYA MADALLEL — you got absolutely ROASTED. Check food.jpg & coffee.jpg if they exist, or else manifest your shame. 🔥", "color: #ff9f4a; font-size: 16px; font-weight: bold; background: #1e1b13; padding: 10px; border-radius: 10px;");
-  console.log("%c💀 Your friend in coffee.jpg is secretly laughing at you too 💀", "color: #ffad60");
-
-  // Additional effect: when you click any roast-text, copy roast to clipboard? just for fun.
-  const allRoastText = document.querySelectorAll('.roast-text');
-  allRoastText.forEach((el, idx) => {
-    el.addEventListener('click', () => {
-      const roastToCopy = el.innerText;
-      navigator.clipboard.writeText(roastToCopy).then(() => {
-        const toastMsg = document.createElement('div');
-        toastMsg.innerText = '🔥 Roast copied! Share the shame 🔥';
-        toastMsg.style.position = 'fixed';
-        toastMsg.style.bottom = '20px';
-        toastMsg.style.left = '50%';
-        toastMsg.style.transform = 'translateX(-50%)';
-        toastMsg.style.backgroundColor = '#2c1c0e';
-        toastMsg.style.color = '#ffcd94';
-        toastMsg.style.padding = '8px 16px';
-        toastMsg.style.borderRadius = '40px';
-        toastMsg.style.fontWeight = 'bold';
-        toastMsg.style.zIndex = '999';
-        toastMsg.style.border = '1px solid #ffae5a';
-        toastMsg.style.fontSize = '0.8rem';
-        document.body.appendChild(toastMsg);
-        setTimeout(() => toastMsg.remove(), 1800);
-      }).catch(() => {});
+  // additional hover professional humor
+  const execCards = document.querySelectorAll('.exec-card');
+  execCards.forEach(card => {
+    card.addEventListener('click', () => {
+      console.log("🔍 Executive profile viewed — the legend behind global legalization movement.");
     });
-    el.style.cursor = 'pointer';
-    el.title = 'Click to copy this brutal roast 📋';
+  });
+
+  // official smooth scroll to make it 'corporately' mature
+  document.querySelectorAll('.nav-links a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      if (targetId === 'Mission') {
+        document.querySelector('.mission-block').scrollIntoView({ behavior: 'smooth' });
+      } else if (targetId === 'Leadership') {
+        document.querySelector('.executive-grid').scrollIntoView({ behavior: 'smooth' });
+      } else if (targetId === 'Policy') {
+        document.querySelector('.mission-block').scrollIntoView({ behavior: 'smooth' });
+      } else if (targetId === 'Petition') {
+        document.querySelector('.petition-card').scrollIntoView({ behavior: 'smooth' });
+      }
+    });
   });
 </script>
-
-<!-- additional inline style for hover effects and responsive -->
-<style>
-  .roast-text {
-    transition: all 0.1s;
-  }
-  .roast-text:active {
-    background: #fa9e4d22;
-  }
-  .img-frame img {
-    transition: filter 0.3s;
-  }
-  .roast-card:hover .img-frame img {
-    filter: brightness(1.02) contrast(1.1) sepia(0.1);
-  }
-  ::selection {
-    background: #e07c2c;
-    color: #020202;
-  }
-  .drug-dealer-header, .fake-drug-section {
-    transition: 0.3s;
-  }
-  button.cta-button {
-    transition: 0.05s linear;
-  }
-</style>
 </body>
 </html>
